@@ -25,5 +25,6 @@ int main(void) {
         scanf("%d", &A[i]);
     }
     printf("The %d smallest number is: %d\n", index, randomSelect(A, 0, length - 1, index));
+    free(A);
     return 0;
 }
