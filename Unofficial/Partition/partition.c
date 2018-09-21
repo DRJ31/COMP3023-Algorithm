@@ -1,10 +1,16 @@
+#include <time.h>
 #include "partition.h"
 
-extern void exchange(int *a, int *b)
+static void exchange(int *a, int *b)
 {
 	int tmp = *a;
 	*a = *b;
 	*b = tmp;
+}
+
+static int randomPos(int p, int r) {
+    srand((int) time(0));
+    return rand() % (r - p + 1) + p;
 }
 
 extern int randomPartition(int* A, int p, int r)
@@ -23,9 +29,4 @@ extern int randomPartition(int* A, int p, int r)
 	}
 	exchange(&A[i + 1], &A[r]);
 	return i + 1;
-}
-
-extern int randomPos(int p, int r) {
-    srand((int) time(0));
-    return rand() % (r - p + 1) + p;
 }
