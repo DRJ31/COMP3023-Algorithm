@@ -1,5 +1,7 @@
 # Folders
 .idea/
 
-#Files
+# Files
+*.zip
+*.7z
 .DS_Store
