@@ -1,6 +1,7 @@
 #include "partition.h"
 
-int randomSelect(int *A, int p, int r, int i) {
+int randomSelect(int *A, int p, int r, int i)
+{
     if (p == r)
         return A[p];
     int q = randomPartition(A, p, r);
@@ -13,13 +14,15 @@ int randomSelect(int *A, int p, int r, int i) {
         return randomSelect(A, q + 1, r, i - k);
 }
 
-int main(void) {
+int main(void)
+{
     int *A, length, index;
     printf("Please input the length of array: ");
     scanf("%d", &length);
     A = (int *)malloc(sizeof(int) * length);
     puts("Please input the array: ");
-    for (int i = 0; i < length; i++) {
+    for (int i = 0; i < length; i++)
+    {
         scanf("%d", &A[i]);
     }
     printf("Input the number of index: ");

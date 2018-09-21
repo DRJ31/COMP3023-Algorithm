@@ -8,12 +8,13 @@ static void exchange(int *a, int *b)
 	*b = tmp;
 }
 
-static int randomPos(int p, int r) {
-    srand((int) time(0));
-    return rand() % (r - p + 1) + p;
+static int randomPos(int p, int r)
+{
+	srand((int)time(0));
+	return rand() % (r - p + 1) + p;
 }
 
-extern int randomPartition(int* A, int p, int r)
+extern int randomPartition(int *A, int p, int r)
 {
 	int q = randomPos(p, r);
 	exchange(&A[q], &A[r]);
