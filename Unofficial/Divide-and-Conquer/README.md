@@ -1,5 +1,5 @@
 # Divide and Conquer
-If you want to obtain all the output file, just type
+If you want to obtain all the output files, just type
 ```bash
 $ make
 ```

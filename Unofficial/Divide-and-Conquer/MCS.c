@@ -45,7 +45,7 @@ int main(void)
 	{
 		scanf("%d", &numbers[i]);
 	}
-	printf("Max Sub Array is: %d\n", maxSubArray(numbers, size));
+	printf("Max Contiguous Subarray is: %d\n", maxSubArray(numbers, size));
 	free(numbers);
 	return 0;
 }
