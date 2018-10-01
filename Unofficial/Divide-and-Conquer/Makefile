@@ -1,6 +1,6 @@
 CC = gcc
 RM = rm -f
-TARGETS = qsort selection
+TARGETS = qsort selection MCS
 
 .PHONY: all clean
 
@@ -14,6 +14,9 @@ qsort: qsort.o partition.o
 
 selection: selection.o partition.o
 	${CC} -o $@ $^
+
+MCS: MCS.c
+	${CC} -o $@ $<
 
 %.o: %.c
 	${CC} -c $< 
