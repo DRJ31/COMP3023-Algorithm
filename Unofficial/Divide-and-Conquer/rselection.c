@@ -1,19 +1,5 @@
 #include "partition.h"
 
-int randomSelect(int *A, int p, int r, int i)
-{
-    if (p == r)
-        return A[p];
-    int q = randomPartition(A, p, r);
-    int k = q - p + 1;
-    if (i == k)
-        return A[q];
-    else if (i < k)
-        return randomSelect(A, p, q - 1, i);
-    else
-        return randomSelect(A, q + 1, r, i - k);
-}
-
 int main(void)
 {
     int *A, length, index;
