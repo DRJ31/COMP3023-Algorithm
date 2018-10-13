@@ -1,4 +1,4 @@
-#include "partition.h"
+#include "func.h"
 
 void rquicksort(int *A, int p, int r)
 {

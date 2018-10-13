@@ -1,4 +1,4 @@
-#include "partition.h"
+#include "func.h"
 
 int main(void)
 {

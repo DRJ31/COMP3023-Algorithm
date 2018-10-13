@@ -9,10 +9,10 @@ all: ${TARGETS}
 clean:
 	${RM} *.o ${TARGETS}
 
-qsort: qsort.o partition.o dselection.o
+qsort: qsort.o func.o
 	${CC} -o $@ $^
 
-rselection: rselection.o partition.o
+rselection: rselection.o func.o
 	${CC} -o $@ $^
 
 MCS: MCS.c
