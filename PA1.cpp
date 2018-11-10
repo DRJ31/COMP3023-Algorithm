@@ -152,6 +152,8 @@ int main(void) {
 		DFS(&graph);
 		BFS(&graph);
 		TopologicalSorting(&graph);
+
+		graph.clear(); // Clean the vector
 	}
 	return 0;
 }
