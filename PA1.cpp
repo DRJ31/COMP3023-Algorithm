@@ -14,6 +14,7 @@ public:
 	int id; // ID of the vertex
 	
 	Vertex(); // Constructor
+	~Vertex(); // Destructor
 };
 
 // Initialize Vertex
@@ -21,6 +22,9 @@ Vertex::Vertex() {
 	inDegree = 0;
 	color = true;
 }
+
+// Destruct Vertex
+Vertex::~Vertex() {}
 
 // Initialize color in graph
 void initColor(vector<Vertex> *graph) {
@@ -153,8 +157,8 @@ int main(void) {
 		BFS(&graph);
 		TopologicalSorting(&graph);
 
-		graph.clear(); // Clean the elements in vector
+		graph.clear(); // Clean the vector
 	}
-	vector<Vertex>().swap(graph); // Release the memory
+	vector<Vertex>().swap(graph); // Realease the memory
 	return 0;
 }
