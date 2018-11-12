@@ -153,7 +153,8 @@ int main(void) {
 		BFS(&graph);
 		TopologicalSorting(&graph);
 
-		graph.clear(); // Clean the vector
+		graph.clear(); // Clean the elements in vector
 	}
+	vector<Vertex>().swap(graph); // Release the memory
 	return 0;
 }
